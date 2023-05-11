@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-md bg-light fixed-top">
+        <nav class="navbar navbar-expand-md fixed-top" id="navbar">
             <div class="container-fluid">
-                <div class="row align-items-center justify-content-between w-100">
-                    <div class="col-auto ms-1">
+                <div class="row align-items-start justify-content-between w-100">
+                    <div class="col-auto ms-md-2">
                         <img class="logo-boolean d-md-none" src="./img/mobile-logo.png" alt="">
-                        <img class="logo-boolean d-none d-md-block" src="./img/logo.svg" alt=""> 
+                        <img class="logo-boolean d-none d-md-block" src="./img/logo.svg" alt="">
                     </div>
                     <div class="col background-blue">
                     </div>
-                    <div class="col-auto"> 
-                        <ul class="navbar-nav mb-2 mb-lg-0">
+                    <div class="col-auto">
+                        <ul class="navbar-nav">
                             <li class="nav-item d-none d-md-block">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-list"></i></a>
+                                <a class="nav-link btn btn-light" href="#"><i class="fa-solid fa-list"></i></a>
                             </li>
                             <li class="nav-item d-none d-md-block">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-circle-question"></i></a>
+                                <a class="nav-link btn btn-light" href="#"><i class="fa-solid fa-circle-question"></i></a>
                             </li>
                             <li class="nav-item d-none d-md-block">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                            </li>
+                                <a class="nav-link btn btn-light" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                            </li> 
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-bell" style="color: #ff8f00;"></i></a>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <button class="btn btn-light" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-bell" style="color: #ff8f00;"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -42,86 +57,358 @@
         </nav>
     </header>
     <main>
-       <div class="row w-100 align-items-start m-0">
-            <nav class="col-auto p-0">
-                <div class="d-flex flex-column p-3 text-bg-dark sidebar">
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="background-blue">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </li>
-                        <li class="background-blue">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </li>
-                        <li class="background-blue">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </li>
-                    </ul>
-                    <div class="background-blue">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="d-flex flex-column p-3 text-bg-dark sidebar">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="py-1">
+                    <a href="" class="btn text-light"><i class="fa-solid fa-house"></i>
+                        <h6 class="d-none d-md-inline">Home</h6>
+                    </a>
+                </li>
+                <li class="py-1">
+                    <a href="" class="btn text-light"><i class="fa-solid fa-chart-simple"></i>
+                        <h6 class="d-none d-md-inline">Stats</h6>
+                    </a>
+                </li>
+                <li class="py-1">
+                    <a href="" class="btn text-light"><i class="fa-solid fa-signal"></i>
+                        <h6 class="d-none d-md-inline">Signals</h6>
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <a href="" class="btn text-light"><i class="fa-solid fa-gear"></i>
+                    <h6 class="d-none d-md-inline">Admin</h6>
+                </a>
+            </div>
+        </div>
+        <div class="row" id="content-page">
+            <div class="col-12 background-blue-vero" id="topbar">
+                <div class="row px-1">
+                    <div class="col-12 col-sm-3 order-sm-3 py-3">
+                        Nuovo Studente
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"><strong>+</strong></button> 
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h6><strong>Inserisci un nuovo studente</strong></h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 order-sm-1 py-3">
+                        <h1 class="d-inline h2">Boolean </h1><span class="badge badge-transparent">Piano blaze</span>
+                    </div>
+                    <div class="col-12 col-sm-3 order-sm-2 py-3">
+                        <span>Studenti onlina negli ultimi 30 minuti</span>
+                        <h2>125</h2>
                     </div>
                 </div>
-            </nav>
-            <div class="col">
-                <div class="row" id="content-page">
-                    <div class="col-12 background-red"></div>
-                    <div class="col-12 col-md-6">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card my-3">
-                                    <div class="card-header">
-                                    Featured
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item border-none"> An item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> A second item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> A third item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> An item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> A second item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> A third item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> An item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> A second item<hr class="m-0"></li>
-                                        <li class="list-group-item border-none"> A third item</li>
-                                    </ul>
-                                </div>
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card my-3">
+                            <div class="card-header">
+                                <h3>Prossime classi</h3>
                             </div>
-                            <div class="col-12">
-                                <div class="card my-3">
-                                    <div class="card-header">
-                                    Featured
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <span><strong>text</strong></span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span><strong>text</strong></span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span><strong>text</strong></span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span><strong>text</strong></span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span><strong>text</strong></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="underline-cards-items border-none list-group-item py-0">
+                                    <hr class="m-0 p-0">
+                                </li>
+                                <li class="list-group-item border-none">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-code name-icon"></i>
+                                            <span>text</span>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="row">
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>12 Feb 2023</span>
+                                                </div>
+                                                <div class="col-auto d-none d-sm-block text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span class="badge text-bg-success">text</span>
+                                                </div>
+                                                <div class="col-auto text-center text-nowrap">
+                                                    <span>text</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <div class="col-12">
-                            <div class="card my-3">
-                                <div class="card-header">
-                                Featured
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Special title treatment</h5>
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
+                    <div class="col-12">
+                        <div class="card my-3">
+                            <div class="card-header">
+                                <h3>F.A.Q.</h3>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="card my-3">
-                                <div class="card-body">
-                                    <img src="./img/stats.jpeg" class="card-img-top" alt="...">
-                                </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-       </div>
+            <div class="col-12 col-md-5">
+                <div class="col-12">
+                    <div class="card my-3">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><input type="checkbox" name="" id=""> Items</li>
+                                    <li class="list-group-item"><input type="checkbox" name="" id=""> Items</li>
+                                    <li class="list-group-item"><input type="checkbox" name="" id=""> Items</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card my-3">
+                        <div class="card-body">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><img src="./img/stats.jpeg" class="card-img-top"
+                                            alt="...">
+                                        <h5>titolo</h5><span>texto</span>
+                                    </li>
+                                    <li class="list-group-item">text</li>
+                                    <li class="list-group-item">text</li>
+                                    <li class="list-group-item">text</li>
+                                    <li class="list-group-item">text</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
 </body>
+
 </html>
