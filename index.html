@@ -18,12 +18,18 @@
     <header>
         <nav class="navbar navbar-expand-md fixed-top" id="navbar">
             <div class="container-fluid">
-                <div class="row align-items-start justify-content-between w-100">
+                <div class="row align-items-center justify-content-between w-100">
                     <div class="col-auto ms-md-2">
                         <img class="logo-boolean d-md-none" src="./img/mobile-logo.png" alt="">
                         <img class="logo-boolean d-none d-md-block" src="./img/logo.svg" alt="">
                     </div>
-                    <div class="col background-blue">
+                    <div class="col">
+                        <form action="cerca">
+                            <div class="input-group">
+                                <button type="submit" class="input-group-text background-gray" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <input type="search" class="form-control background-gray" placeholder="Prova a cercare: lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+                        </form>
                     </div>
                     <div class="col-auto">
                         <ul class="navbar-nav">
@@ -43,10 +49,10 @@
                                             <i class="fa-solid fa-bell" style="color: #ff8f00;"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
+                                            <li class="p-3"><a class="text-dark text-decoration-none" href="#">Profilo</a></li>
+                                            <li class="p-3"><a class="text-dark text-decoration-none" href="#">Fatturazione</a></li>
+                                            <li class="p-3"><a class="text-dark text-decoration-none" href="#">Logout</a></li>
+                                          </ul>
                                     </li>
                                 </ul>
                             </li>
@@ -57,26 +63,26 @@
         </nav>
     </header>
     <main>
-        <div class="d-flex flex-column p-3 text-bg-dark sidebar">
+        <div class="d-flex flex-column p-3 text-bg-dark sidebar align-items-stretch">
             <ul class="nav nav-pills flex-column mb-auto">
-                <li class="py-1">
-                    <a href="" class="btn text-light"><i class="fa-solid fa-house"></i>
+                <li class="py-1 sidebar_item">
+                    <a href="" class="btn w-100 text-start text-light"><i class="fa-solid fa-house"></i>
                         <h6 class="d-none d-md-inline">Home</h6>
                     </a>
                 </li>
-                <li class="py-1">
-                    <a href="" class="btn text-light"><i class="fa-solid fa-chart-simple"></i>
+                <li class="py-1 sidebar_item">
+                    <a href="" class="btn w-100 text-start text-light"><i class="fa-solid fa-chart-simple"></i>
                         <h6 class="d-none d-md-inline">Stats</h6>
                     </a>
                 </li>
-                <li class="py-1">
-                    <a href="" class="btn text-light"><i class="fa-solid fa-signal"></i>
+                <li class="py-1 sidebar_item">
+                    <a href="" class="btn w-100 text-start text-light"><i class="fa-solid fa-signal"></i>
                         <h6 class="d-none d-md-inline">Signals</h6>
                     </a>
                 </li>
             </ul>
-            <div>
-                <a href="" class="btn text-light"><i class="fa-solid fa-gear"></i>
+            <div class="sidebar_item">
+                <a href="" class="btn w-100 text-start text-light"><i class="fa-solid fa-gear"></i>
                     <h6 class="d-none d-md-inline">Admin</h6>
                 </a>
             </div>
@@ -84,24 +90,116 @@
         <div class="row" id="content-page">
             <div class="col-12 background-blue-vero" id="topbar">
                 <div class="row px-1">
-                    <div class="col-12 col-sm-3 order-sm-3 py-3">
-                        Nuovo Studente
+                    <div class="col-12 col-sm-2 order-sm-3 py-3">
+                        <strong  class="me-2">Nuovo Studente</strong>
                         <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight"><strong>+</strong></button> 
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas offcanvas-end offcanvas-size" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div class="offcanvas-header">
                                 <h6><strong>Inserisci un nuovo studente</strong></h6>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                ...
+                                <div class="row">
+                                    <div class="div-6">
+                                        <form>
+                                           <div class="row">
+                                                <div class="col-6">
+                                                    <div class="mb3">
+                                                        <label for="input-nome" class="form-label">Nome</label>
+                                                        <input type="text" class="form-control" id="input-nome" aria-describedby="emailHelp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="mb3">
+                                                        <label for="input-Cognome" class="form-label">Cognome</label>
+                                                        <input type="text" class="form-control" id="input-Cognome" aria-describedby="emailHelp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 pt-2">
+                                                    <div class="mb3">
+                                                        <label for="input-email" class="form-label">Email</label>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="email" class="form-control" aria-label="Username" aria-describedby="basic-addon1" required>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 pt-2">
+                                                    <div class="mb3">
+                                                        <label for="input-Password-1" class="form-label">Password</label>
+                                                        <input type="password" class="form-control" id="input-Password-1" aria-describedby="emailHelp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="mb3">
+                                                        <label for="input-email-2" class="form-label">Indirizzo Email</label>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="email" class="form-control" aria-label="Username" aria-describedby="basic-addon1" required>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="mb3">
+                                                        <label for="input-Password-2" class="form-label">Password</label>
+                                                        <input type="password" class="form-control" id="input-Password-2" aria-describedby="emailHelp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb3">
+                                                        <label for="input-Indirizzo" class="form-label">Indirizzo</label>
+                                                        <input type="text" class="form-control" id="input-Indirizzo" aria-describedby="emailHelp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 pt-2">
+                                                    <div class="mb3">
+                                                        <label for="input-Citta" class="form-label">Città</label>
+                                                        <input type="text" class="form-control" id="input-Citta" aria-describedby="emailHelp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pt-2">
+                                                    <div class="mb3">
+                                                        <label for="input-Stato" class="form-label">Stato</label>
+                                                        <select class="form-select" aria-label="Default select example" required>
+                                                            <option selected>Scegli...</option>
+                                                            <option value="1">Pizza</option>
+                                                            <option value="2">Croissant</option>
+                                                            <option value="3">Hamburger</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2 pt-2">
+                                                    <div class="mb3">
+                                                        <label for="input-CAP" class="form-label">CAP</label>
+                                                        <input type="text" class="form-control" id="input-CAP" aria-describedby="emailHelp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 pt-2">
+                                                    <div class="mb-3">
+                                                        <label for="formFile" class="form-label">Default file input example</label>
+                                                        <input class="form-control" type="file" id="formFile" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="checkbox" name="seleziona" id="seleziona" required> Seleziona per proseguire.
+                                                </div>
+                                                <div class="col-12 pt-2">
+                                                    <button class="btn btn-primary" type="submit">Salva</button>
+                                                    <button class="btn btn-warning" type="reset">Svuota</button>
+                                                </div>
+                                           </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 order-sm-1 py-3">
                         <h1 class="d-inline h2">Boolean </h1><span class="badge badge-transparent">Piano blaze</span>
+                        <div><span class="badge badge-transparent">3app</span> >> <span class="badge badge-transparent d-none d-md-inline">Boolean mobile app</span> <span class="badge badge-transparent d-none d-md-inline">Boolean web app</span> <span class="badge badge-transparent d-none d-md-inline">Boolean blog app</span> <span class="badge badge-transparent d-md-none"></span></div>
                     </div>
-                    <div class="col-12 col-sm-3 order-sm-2 py-3">
+                    <div class="col-12 col-sm-4 order-sm-2 py-3">
                         <span>Studenti onlina negli ultimi 30 minuti</span>
                         <h2>125</h2>
                     </div>
@@ -112,7 +210,7 @@
                     <div class="col-12">
                         <div class="card my-3">
                             <div class="card-header">
-                                <h3>Prossime classi</h3>
+                                <h4>Prossime classi</h4>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item border-none">
@@ -141,7 +239,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -168,7 +266,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -195,7 +293,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -222,7 +320,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -249,7 +347,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -276,7 +374,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -303,7 +401,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -330,7 +428,7 @@
                                 <li class="underline-cards-items border-none list-group-item py-0">
                                     <hr class="m-0 p-0">
                                 </li>
-                                <li class="list-group-item border-none">
+                                <li class="list-group-item border-none next-classes-item">
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col">
                                             <i class="fa-solid fa-code name-icon"></i>
@@ -360,13 +458,48 @@
                     <div class="col-12">
                         <div class="card my-3">
                             <div class="card-header">
-                                <h3>F.A.Q.</h3>
+                                <h4>F.A.Q.</h4>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Come aggiungere un nuovo studente?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                Clicca sul + in alto nella casella blu.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Come posso accedere alle informazioni sul mio account?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                Clicca sull'icona della campanella.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Posso usare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">S I .</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -376,7 +509,7 @@
                 <div class="col-12">
                     <div class="card my-3">
                         <div class="card-header">
-                            Featured
+                            <h4>Todo</h4>
                         </div>
                         <div class="card-body">
                             <div class="card">
