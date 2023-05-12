@@ -74,7 +74,7 @@ main{
     }
 
     .sidebar .fa-solid {
-        width: 30px;
+        width: 20px;
         text-align: center;
     }
 
@@ -126,6 +126,17 @@ main{
             cursor: pointer;
         }
 
+        .col-tab{
+            width: 65px;
+        }
+
+        .col-tab-md{
+            width: 80px;
+        }
+
+        .col-tab-lg{
+            width: 110px;
+        }
 /**************
  SMARTPHONE
 ***************/
@@ -162,4 +173,3 @@ main{
                 width: 100% !important;
             }    
 }
-
