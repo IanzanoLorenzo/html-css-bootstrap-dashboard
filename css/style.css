@@ -130,7 +130,7 @@ main{
         }
 
         .next-classes-item:hover{
-            background-color: beige !important;
+            background-color: #e5e5e5 !important;
             cursor: pointer;
         }
 
