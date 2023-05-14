@@ -137,6 +137,21 @@ main{
         .col-tab-lg{
             width: 110px;
         }
+
+        .azioni-icon i{
+            padding: 0;
+            width: 25px;
+            height: 25px;
+            color: gray;
+            border: 1px gray solid;
+            border-radius: 5px;
+            padding-top: 5px;
+        }
+
+        .azioni-icon i:hover{
+            border: 1px black solid;
+        }
+
 /**************
  SMARTPHONE
 ***************/
